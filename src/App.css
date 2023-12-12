@@ -1,42 +1,43 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: lighter;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+  background-image: url("assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@keyframes logo-spin {
-  from {
+.presentButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  animation: opacity-change 1s infinite;
+}
+
+@keyframes opacity-change {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(20deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  50% {
+    transform: rotate(-20deg);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  100% {
+    transform: rotate(0deg);
+  }
 }
